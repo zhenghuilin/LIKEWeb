@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="layui/css/layui.css">
+<link rel="stylesheet" href="css/login.css">
+<link rel="stylesheet" href="css/public_style.css">
+</head>
+<body>
+	<nav class="navbar navbar-default navbar-fixed-top">
+	  	<div class="container">
+		    <!-- Brand and toggle get grouped for better mobile display -->
+		    <div class="navbar-header">
+		      	<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+			        <span class="sr-only">Toggle navigation</span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+		      	</button>
+		      	<a class="navbar-brand" href="#"><img alt="Brand" src="images/logo.png">LIKE</a>
+		    </div>
+	  	</div><!-- /.container-fluid -->
+	</nav>
+	<div class="container content">
+		<div class="row form_center">
+			<div class="col-md-6"></div>
+			<div class="col-md-4 form_login">
+				<form class="layui-form" action="">
+					<div class="login_title">
+						<h3>用户登录</h3>
+					</div>
+					<!-- 输入用户名 -->
+					<input type="text" name="user"  lay-verify="required" placeholder="请输入用户名/手机号" autocomplete="off" class="layui-input user_input">
+					<!-- 输入密码 -->
+					<input type="password" name="pwd"  lay-verify="required" placeholder="请输入密码" autocomplete="off" class="layui-input pwd_input">
+					<div class="layui-input-block">
+						<li>
+							<input type="text" id = "input" value="" lay-verify="required" placeholder="请输入验证码" autocomplete="off" class=" layui-input verify_code_input">
+						</li>
+						<li>
+							<input type = "button" id="code" onclick="createCode()" class="layui-input-inline" /> 
+						</li>
+					</div>
+					<div class="layui-input-block">
+					    <input type="radio" name="usertype" value="普通用户" title="普通用户" checked="" style="margin-left: 20px;">
+					    <input type="radio" name="usertype" value="管理员" title="管理员">
+						<input type="checkbox" name="rem_pwd" lay-skin="primary" title="记住密码" checked="">
+					</div>
+
+				</form>
+				<!--登录和注册按钮-->
+				<a href="index.html"><button class="layui-btn" autocomplete="onclick" lay-submit="" lay-filter="">登 录</button></a>
+				<a href="register.html"><button class="layui-btn" autocomplete="onclick" lay-submit="" lay-filter="" style="background-color: #999999;">注 册</button></a>
+			</div>
+			<div class="col-md-2"></div>
+		</div>
+		<!--底部内容 -->
+		<div class="content-bottombar">
+			<!-- <div class="row"> -->
+			<div class="bottom-link-parent">
+				<a href="#" class="bottom-link">帮助</a>
+				<a href="#" class="bottom-link">隐私</a>
+				<a href="#" class="bottom-link">条款</a>
+			</div>
+			<div class="row">
+				<div class="bottom-link-parent">copyright@2018 Shineonu体验技术部出品</div>
+			</div>
+		</div>
+	</div>
+	<script src="layui/layui.js"></script>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/verify_code.js"></script>
+	<script>
+       layui.use('form', function(){
+			  var form = layui.form
+		});
+    </script>
+</body>
+</html>

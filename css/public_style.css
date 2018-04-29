@@ -1,0 +1,45 @@
+body{
+	background-color: #f2f2f2;
+	padding-top: 60px;
+	padding-bottom: 20px;
+}
+.navbar-default{
+	background-color:#fff;
+	border-color:#fff;
+}
+.navbar-brand>img{
+	margin-top: -10px; 
+	width: 40px;
+	height: 40px;
+	display: inline-block;
+}
+.navbar-header a{
+	font-size: 20px;
+	font-style: italic;
+}
+.navbar-right li{
+	padding-left:25px;
+}
+.navbar-right img{
+	width: 25px;
+	height:25px;
+	border-radius: 25px;
+	margin-top: 12.5px;
+}
+.form-group{
+	padding-left: 100px;
+}
+/*底部栏*/
+.content-bottombar{
+	position: fixed;
+	bottom: 10px;
+	text-align: center;
+	width: 100%;
+}
+.bottom-link,.bottom-link:hover{
+    color: #558ED5;
+    text-decoration: none;
+}
+.bottom-link-parent{
+	color: #558ED5;
+}
