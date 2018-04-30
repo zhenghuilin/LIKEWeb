@@ -79,8 +79,20 @@
 #tab_options_all{
 	z-index:1;
 }
+#collect_browse{
+	z-index:1;
+}
+#collect_title{
+	padding-left: 20px;
+	background-color: #fff;
+	line-height: 50px;
+	border-radius: 5px;
+}
+#collect_title p{
+	font-size: 20px;
+	font-weight: bold;
+}
 #tab_options{
-	
 	background-color: #fff;
 	line-height: 40px;
 	border-radius: 5px;

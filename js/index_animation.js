@@ -26,6 +26,8 @@ window.onload = function () {
     })
 };
 
+
+
 /*添加链接和分享到主题的点击事件，其下面出现一个div*/
 var link_a  = document.getElementById('link_a');
 		var share_a  = document.getElementById('share_a');
