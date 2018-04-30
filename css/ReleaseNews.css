@@ -30,86 +30,38 @@
 .left_topic_1  li a:hover,.left_topic_2  li a:hover{
 	color: #fff;
 }
+#div_left_top .active{
+	background-color: #558ED5;
+}
+#div_left_top .active a{
+	color: #fff;
+} */
 .user_name_head li img{
 	border-radius: 5px 5px 0 0;
 }
-.user_name_head .user_name{
+.user_name_head .user_name ,.user_name_head .user_great,.user_name_head .user_featured{
 	background-color: #fff;
 	height: 38px;
 	border-radius: 0 0 5px 5px;
 	line-height: 38px;
-}
+} 
 .user_name_head span{
-	color: #000;
 	padding: 16px;
-} */
-.push_dynamic{
-	background-color: #fff;
-	padding: 10px 30px;
-	border-radius: 5px;
 }
-.push_dynamic textarea{
-	margin-top: 10px;
-	height: 100px;
-}
-.options{
-	padding-top: 5px;
-}
-.options img{
-	margin-bottom: 2px;
-}
-.options a:hover{
-	text-decoration: none;
-	color: #558ED5;
-}
-.submit_btn{
-	background-color: #558ED5;
-	border:none;
-	border-radius: 10px;
-	color: #fff;
-	width: 70px;
-	line-height: 25px;
-}
-#link_add{
-	display: none;
-}
-#share_topic{
-	display: none;
-}
-#tab_options_all{
-	z-index:1;
-}
-#tab_options{
-	
-	background-color: #fff;
-	line-height: 40px;
-	border-radius: 5px;
-}
-#tab_options a{
-	padding:5px;
-}
-#tab_options .active{
-	border-bottom: 2px solid #000;
-}
-/*  推荐的资讯*/
 .newsLists{
 	background-color: #fff;
 	padding: 20px;
 	border-radius: 5px;
-	margin-top: 5px;
-	z-index:2;
 }
 .newsLists .head_photo img{
+	border-radius:40px;
 	width: 40px;
 	height: 40px;
 }
 .topic_name p{
 	font-weight: bold;
 }
-#content_details{
-	color: black;
-}
-.newsLists .source{
+.newsLists span{
 	color: #888888;
 	margin-top: 10px;
 }
@@ -119,27 +71,4 @@
 .operat img{
 	margin-top: -5px;
 	padding-right: 10px;
-}
-
-#recommend{
-	background-color: #fff;
-	border-radius: 5px;
-	padding: 8px 16px;
-}
-#recommend a:hover{
-	color: #558ED5;
-	text-decoration: none;
-}
-.focus_ons{
-	padding: 5px 0 0 0; 
-	height: 42px;
-}
-.focus_ons li{
-	display: inline-block;
-}
-.focus_ons li span{
-	color: #888888;
-}
-.focus_ons li img{
-	margin-bottom: 20px;
 }
