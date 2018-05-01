@@ -6,7 +6,7 @@
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="layui/css/layui.css">
 	<link rel="stylesheet" href="css/public_style.css">
-	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="css/SearchResult.css">
 </head>
 <body>
 	<!--导航栏-->
@@ -20,7 +20,7 @@
 		        <span class="icon-bar"></span>
 		        <span class="icon-bar"></span>
 		    </button>
-		    <a class="navbar-brand" href="#"><img alt="Brand" src="images/logo.png">LIKE</a>
+		    <a class="navbar-brand" href="index.html"><img alt="Brand" src="images/logo.png">LIKE</a>
 	    </div>
 
 	    <!-- Collect the nav links, forms, and other content for toggling -->
@@ -29,7 +29,7 @@
 		        <div class="form-group">
 		          <input type="text" class="form-control" placeholder="大家都在搜阿里巴巴">
 		        </div>
-		        <a href="SearchResult.html"><button type="submit" class="btn btn-default">Submit</button></a>
+		        <button type="submit" class="btn btn-default">Submit</button>
 		    </form>
 		    <!-- 导航栏右边-->
 	      	<ul class="nav navbar-nav navbar-right">
@@ -44,250 +44,150 @@
 
 	<div class="container body_content">
 		<div class="row">
-			<div class="col-md-3">	<!-- 左侧用户的竖直导航和用户名头像 -->
-				<ul class="user_name_head"><!-- 头像和用户名 -->
-					<li>
-						<img class="img-responsive" src="images/booleen_photo.jpg">
-					</li>
-					<li class="user_name">
-						<span>Booleen</span>
-					</li>
-				</ul>
-				<div id="div_left_top"><!--左侧用户的竖直导航-->
-					<ul class="left_topic_1">
-						<li class="li_first"><a href="ReleaseNews.html">发布的动态</a></li>
-						<li><a href="CreateTopic.html">创建的主题</a></li>
-						<li><a href="FollowTopic.html">关注的主题</a></li>
-						<li><a href="FollowPerson.html">我关注的人</a></li>
-						<li class="li_final"><a href="FollowMe.html">关注我的人</a></li>
-					</ul>
-					<ul class="left_topic_2">
-						<li class="li_first"><a href="Collect.html">我的收藏</a></li>
-						<li class="li_final"><a href="Browse.html">我的浏览</a></li>
-					</ul>
-				</div>
-			</div>
-			<!-- 左侧用户的竖直导航结束 -->
-			<!-- 中间资讯推荐 -->
+			<div class="col-md-1"></div>
 			<div class="col-md-7">
-				<div class="push_dynamic"><!-- 发布动态 -->
+				<div id="tab_options">
+					<div style="height: 10px;background-color: #f2f2f2;"></div>
+					<div class="row aaa">
+						<div class="col-md-2">
+							<a href="" class="active">综合</a>
+						</div>
+						<div class="col-md-2">
+							<a href="">消息</a>
+						</div>
+						<div class="col-md-2">
+							<a href="">主题</a>
+						</div>
+						<div class="col-md-2">
+							<a href="">用户</a>
+						</div>
+						<div class="col-md-4"></div>
+					</div>
+				</div>
+				
+				<p class="SearchResultTilte">热门</p>
+					<!-- 资讯正文 -->
+				<div class="newsLists">
 					<div class="row">
-					 	<div class="col-md-12">
-							<textarea class="form-control" placeholder="分享点好东西..."></textarea>
+						<div class="col-md-1 head_photo">
+							<img src="images/index_content_image1.jpg" onclick='' >
+						</div>
+						<div class="col-md-10 topic_name">
+							<p>无用但有趣的冷知识</p>
+							<span class="source">来自用户思否 04/18</span>
+						</div>
+						<div class="col-md-1">
+							<img src="images/dropdown.png">
 						</div>
 					</div>
-					<div class="row options">
+					<div class="row">
+						<div class="col-md-1"></div>
+						<div class="col-md-10">
+							<p id="content_details">研究称久坐可能让人变蠢UCLA的希达斯(Prabha Siddarth)博士进行的一项研究表明，久坐行为与大脑内颞叶的厚度减少有关，大脑内颞叶中含有的海马体是学习和记忆的关键区域。研究人员向35名年龄在45到70岁之间的健康人士询问了他们的活动水平和每天坐着的平均小时数，然后使用MRI对他们的大脑进行了扫描。研究人员发现，他们大脑内颞叶的厚度与他们久坐的程度负相关；报告自己坐着的时间较长的研究对象大脑内颞叶最薄。这意味着，你在椅子上坐的时间越久，就越不利于你的大脑健康，可能会导致学习和记忆受损。当然这一结果只是相关性而不是因果性。<br><br>from Solidot</p>
+						</div>
+						<div class="col-md-1"></div>
+					</div>
+					<div class="row operat">
+						<div class="col-md-1"></div>
 						<div class="col-md-2">
-							<a href="#"><img src="images/photos.png">图片</a>
+							<a href=""><img src="images/like.png">8</a>
 						</div>
 						<div class="col-md-2">
-							<a href="#" id =link_a><img src="images/link.png">链接</a>
+							<a href=""><img src="images/comment.png">1</a>
 						</div>
-						<div class="col-md-3">
-							<a href="#" id=share_a><img src="images/share.png">分享到主题</a>
+						<div class="col-md-2">
+							<a href=""><img src="images/share_8a.png">5</a>
+						</div>
+						<div class="col-md-2">
+							<a href=""><img src="images/dislike.png">5</a>
 						</div>
 						<div class="col-md-3"></div>
-						<div class="col-md-2">
-							<input type="button" value="发布" class="submit_btn">
-						</div>
-					</div>
-					<div id = "link_add">
-						<hr>
-						<input class="form-control" placeholder="添加链接">
-					</div>
-					<div id = "share_topic">
-						<hr>
-						<input class="form-control" placeholder="搜索主题">
 					</div>
 				</div>
-				<!-- 发布动态结束 -->
-				<!-- 资讯类别选项卡 -->
-				<div id="tab_options_all">
-					<div style="height: 10px;background-color: #f2f2f2;"></div>
-					<div id="tab_options">
-						<div class="row">
-							<div class="col-md-1"></div>
-							<div class="col-md-2">
-								<a href="" class="active">推荐</a>
-							</div>
-							<div class="col-md-2">
-								<a href="">热门</a>
-							</div>
-							<div class="col-md-2">
-								<a href="">关注</a>
-							</div>
-							<div class="col-md-2">
-								<a href="">实时</a>
-							</div>
-							<div class="col-md-2">
-								<a href="">更多</a>
-							</div>
-							<div class="col-md-1"></div>
+				
+				<p class="SearchResultTilte">消息</p>
+					<!-- 资讯正文 -->
+				<div class="newsLists">
+					<div class="row">
+						<div class="col-md-1 head_photo">
+							<img src="images/index_content_image1.jpg" onclick='' >
+						</div>
+						<div class="col-md-10 topic_name">
+							<p>无用但有趣的冷知识</p>
+							<span class="source">来自用户思否 04/18</span>
+						</div>
+						<div class="col-md-1">
+							<img src="images/dropdown.png">
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-1"></div>
+						<div class="col-md-10">
+							<p id="content_details">研究称久坐可能让人变蠢UCLA的希达斯(Prabha Siddarth)博士进行的一项研究表明，久坐行为与大脑内颞叶的厚度减少有关，大脑内颞叶中含有的海马体是学习和记忆的关键区域。研究人员向35名年龄在45到70岁之间的健康人士询问了他们的活动水平和每天坐着的平均小时数，然后使用MRI对他们的大脑进行了扫描。研究人员发现，他们大脑内颞叶的厚度与他们久坐的程度负相关；报告自己坐着的时间较长的研究对象大脑内颞叶最薄。这意味着，你在椅子上坐的时间越久，就越不利于你的大脑健康，可能会导致学习和记忆受损。当然这一结果只是相关性而不是因果性。<br><br>from Solidot</p>
+						</div>
+						<div class="col-md-1"></div>
+					</div>
+					<div class="row operat">
+						<div class="col-md-1"></div>
+						<div class="col-md-2">
+							<a href=""><img src="images/like.png">8</a>
+						</div>
+						<div class="col-md-2">
+							<a href=""><img src="images/comment.png">1</a>
+						</div>
+						<div class="col-md-2">
+							<a href=""><img src="images/share_8a.png">5</a>
+						</div>
+						<div class="col-md-2">
+							<a href=""><img src="images/dislike.png">5</a>
+						</div>
+						<div class="col-md-3"></div>
+					</div>
+				</div>
+				
+				<p class="SearchResultTilte">主题</p>
+				<div class="follow_topics">
+					<div class="row">
+						<div class="col-md-1 topic_photo"><img src="images/index_content_image1.jpg"></div>
+						<div class="col-md-9 topic_name">
+							<p>无用但有趣的冷知识</p>
+							<span>冷知识-Trivia，是在酒吧，办公室，饭桌上必备的谈资。不求有用，只求有趣</span>
+						</div>
+						<div class="col-md-2">
+							<input type="button" value="关注" class="follow_btn">
 						</div>
 					</div>
 				</div>
 				
-				<!-- 资讯正文 -->
-				<div class="newsLists">
+				<p class="SearchResultTilte">用户</p>
+				<div class="follow_topics">
 					<div class="row">
-						<div class="col-md-1 head_photo">
-							<img src="images/index_content_image1.jpg" onclick='' >
-						</div>
-						<div class="col-md-10 topic_name">
-							<p>无用但有趣的冷知识</p>
-							<span class="source">来自用户思否 04/18</span>
-						</div>
-						<div class="col-md-1">
-							<img src="images/dropdown.png">
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-md-1"></div>
-						<div class="col-md-10">
-							<p id="content_details">研究称久坐可能让人变蠢UCLA的希达斯(Prabha Siddarth)博士进行的一项研究表明，久坐行为与大脑内颞叶的厚度减少有关，大脑内颞叶中含有的海马体是学习和记忆的关键区域。研究人员向35名年龄在45到70岁之间的健康人士询问了他们的活动水平和每天坐着的平均小时数，然后使用MRI对他们的大脑进行了扫描。研究人员发现，他们大脑内颞叶的厚度与他们久坐的程度负相关；报告自己坐着的时间较长的研究对象大脑内颞叶最薄。这意味着，你在椅子上坐的时间越久，就越不利于你的大脑健康，可能会导致学习和记忆受损。当然这一结果只是相关性而不是因果性。<br><br>from Solidot</p>
-						</div>
-						<div class="col-md-1"></div>
-					</div>
-					<div class="row operat">
-						<div class="col-md-1"></div>
-						<div class="col-md-2">
-							<a href=""><img src="images/like.png">8</a>
+						<div class="col-md-1 head_photo"><img src="images/dan.jpg"></div>
+						<div class="col-md-9 user_name">
+							<p>Dan</p>
 						</div>
 						<div class="col-md-2">
-							<a href=""><img src="images/comment.png">1</a>
+							<input type="button" value="已关注" class="follow_btn">
 						</div>
-						<div class="col-md-2">
-							<a href=""><img src="images/share_8a.png">5</a>
-						</div>
-						<div class="col-md-2">
-							<a href=""><img src="images/dislike.png">5</a>
-						</div>
-						<div class="col-md-3"></div>
-					</div>
-				</div>
-
-				<!-- 资讯正文 -->
-				<div class="newsLists">
-					<div class="row">
-						<div class="col-md-1 head_photo">
-							<img src="images/index_content_image1.jpg" onclick='' >
-						</div>
-						<div class="col-md-10 topic_name">
-							<p>无用但有趣的冷知识</p>
-							<span class="source">来自用户思否 04/18</span>
-						</div>
-						<div class="col-md-1">
-							<img src="images/dropdown.png">
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-md-1"></div>
-						<div class="col-md-10">
-							<p id="content_details">研究称久坐可能让人变蠢UCLA的希达斯(Prabha Siddarth)博士进行的一项研究表明，久坐行为与大脑内颞叶的厚度减少有关，大脑内颞叶中含有的海马体是学习和记忆的关键区域。研究人员向35名年龄在45到70岁之间的健康人士询问了他们的活动水平和每天坐着的平均小时数，然后使用MRI对他们的大脑进行了扫描。研究人员发现，他们大脑内颞叶的厚度与他们久坐的程度负相关；报告自己坐着的时间较长的研究对象大脑内颞叶最薄。这意味着，你在椅子上坐的时间越久，就越不利于你的大脑健康，可能会导致学习和记忆受损。当然这一结果只是相关性而不是因果性。<br><br>from Solidot</p>
-						</div>
-						<div class="col-md-1"></div>
-					</div>
-					<div class="row operat">
-						<div class="col-md-1"></div>
-						<div class="col-md-2">
-							<a href=""><img src="images/like.png">8</a>
-						</div>
-						<div class="col-md-2">
-							<a href=""><img src="images/comment.png">1</a>
-						</div>
-						<div class="col-md-2">
-							<a href=""><img src="images/share_8a.png">5</a>
-						</div>
-						<div class="col-md-2">
-							<a href=""><img src="images/dislike.png">5</a>
-						</div>
-						<div class="col-md-3"></div>
-					</div>
-				</div>
-				<!-- 资讯正文 -->
-				<div class="newsLists">
-					<div class="row">
-						<div class="col-md-1 head_photo">
-							<img src="images/index_content_image1.jpg" onclick='' >
-						</div>
-						<div class="col-md-10 topic_name">
-							<p>无用但有趣的冷知识</p>
-							<span class="source">来自用户思否 04/18</span>
-						</div>
-						<div class="col-md-1">
-							<img src="images/dropdown.png">
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-md-1"></div>
-						<div class="col-md-10">
-							<p id="content_details">研究称久坐可能让人变蠢UCLA的希达斯(Prabha Siddarth)博士进行的一项研究表明，久坐行为与大脑内颞叶的厚度减少有关，大脑内颞叶中含有的海马体是学习和记忆的关键区域。研究人员向35名年龄在45到70岁之间的健康人士询问了他们的活动水平和每天坐着的平均小时数，然后使用MRI对他们的大脑进行了扫描。研究人员发现，他们大脑内颞叶的厚度与他们久坐的程度负相关；报告自己坐着的时间较长的研究对象大脑内颞叶最薄。这意味着，你在椅子上坐的时间越久，就越不利于你的大脑健康，可能会导致学习和记忆受损。当然这一结果只是相关性而不是因果性。<br><br>from Solidot</p>
-						</div>
-						<div class="col-md-1"></div>
-					</div>
-					<div class="row operat">
-						<div class="col-md-1"></div>
-						<div class="col-md-2">
-							<a href=""><img src="images/like.png">8</a>
-						</div>
-						<div class="col-md-2">
-							<a href=""><img src="images/comment.png">1</a>
-						</div>
-						<div class="col-md-2">
-							<a href=""><img src="images/share_8a.png">5</a>
-						</div>
-						<div class="col-md-2">
-							<a href=""><img src="images/dislike.png">5</a>
-						</div>
-						<div class="col-md-3"></div>
 					</div>
 				</div>
 
 			</div>
-			<!-- 中间资讯结束 -->
-			<!-- 右侧静态推荐 -->
-			<div class="col-md-2" id=recommend>
-				<div>
-					<p>推荐关注</p>
+			<div class="col-md-3">
+				<div id="PopularSearch">
+					<p class="SearchResultTilte">热门搜索</p>
+					<ul>
+						<li><a href="#">《后来的我们》</a></li>
+						<li><a href="#">2018北京车展</a></li>
+						<li><a href="#">复仇者联盟3</a></li>
+						<li><a href="#">《创造101》</a></li>
+					</ul>
 				</div>
-				<ul class="focus_ons">
-					<li>
-						<img src="images/focus_on1.jpg">
-					</li>
-					<li>
-						<a href="#">人工智能重大发展</a><br>
-						<span>36854关注</span>
-					</li>
-				</ul>
-				<ul class="focus_ons">
-					<li>
-						<img src="images/focus_on1.jpg">
-					</li>
-					<li>
-						<a href="#">人工智能重大发展</a><br>
-						<span>36854关注</span>
-					</li>
-				</ul>
-				<ul class="focus_ons">
-					<li>
-						<img src="images/focus_on1.jpg">
-					</li>
-					<li>
-						<a href="#">人工智能重大发展</a><br>
-						<span>36854关注</span>
-					</li>
-				</ul>
-				<ul class="focus_ons">
-					<li>
-						<img src="images/focus_on1.jpg">
-					</li>
-					<li>
-						<a href="#">人工智能重大发展</a><br>
-						<span>36854关注</span>
-					</li>
-				</ul>
+
 			</div>
+			<div class="col-md-1"></div>
 		</div>
+
 
 		<!--底部内容 -->
 		<div class="content-bottombar">
@@ -305,6 +205,26 @@
 	<script src="layui/layui.js"></script>
 	<script src="js/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
-	<script src="js/index_animation.js"></script>
+	<script>
+		/*左侧从发布的动态开始随导航栏置顶*/
+		window.onload = function () {
+		    var tab_options =  $('#tab_options').offset();
+		     $(window).scroll(function () { //滚动条滚动事件
+		        if ($(this).scrollTop() > tab_options.top-50 ) {
+		            $('#tab_options').css('top', $(this).scrollTop() - tab_options.top+50);
+		        } else if ($(this).scrollTop() <=  tab_options.top+50 ) {
+		            $('#tab_options').css('top',0).css('position', 'relative');
+		       }
+		    })
+	     	var PopularSearch =  $('#PopularSearch').offset();
+	     	$(window).scroll(function () { //滚动条滚动事件
+	        	if ($(this).scrollTop() > PopularSearch.top-60 ) {
+	            	$('#PopularSearch').css('top', $(this).scrollTop() - PopularSearch.top+60);
+	        	} else if ($(this).scrollTop() <=  PopularSearch.top+60 ) {
+	            	$('#PopularSearch').css('top',0).css('position', 'relative');
+	       		}
+		    })
+		};
+	</script>
 </body>
 </html>
