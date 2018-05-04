@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <!--  <meta name="viewport" content="width=device-width, initial-scale=1"> -->
 	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="layui/css/layui.css">
 	<link rel="stylesheet" href="css/public_style.css">
 	<link rel="stylesheet" href="css/SearchResult.css">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
 </head>
 <body>
 	<!--导航栏-->
@@ -26,15 +30,31 @@
 	    <!-- Collect the nav links, forms, and other content for toggling -->
 	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		    <form class="navbar-form navbar-left">
-		        <div class="form-group">
-		          <input type="text" class="form-control" placeholder="大家都在搜阿里巴巴">
+		        <div class="form-group aaaa">
+		          	<input type="text" class="form-control nav_search_input" placeholder="大家都在搜阿里巴巴" onclick="this.value='';focus()">
+		        	<!--搜索下拉框-->
+					 <div id="nav_search" >
+				        <ul id="search_result">
+				        	<li onclick="window.open('SearchResult.html','_self')">《后来的我们》</a> </li>
+				        	<li onclick="window.open('SearchResult.html','_self')">复仇者联盟3</li>
+				        	<li onclick="window.open('SearchResult.html','_self')">创造101</li>
+				        	<li onclick="window.open('SearchResult.html','_self')">华为发布</li>
+				        	<li onclick="window.open('SearchResult.html','_self')">滴滴最新动向</li>
+				        </ul>
+				    </div>
 		        </div>
-		        <button type="submit" class="btn btn-default">Submit</button>
 		    </form>
 		    <!-- 导航栏右边-->
 	      	<ul class="nav navbar-nav navbar-right">
 		        <li><a href="index.html">首页</a></li>
-		        <li><img src="images/head_photo3.jpg" onclick='' ></li>
+		        <li>
+		        	<img src="images/head_photo3.jpg" id =head_quit>
+		        	<div id="quit_btn" >
+				        <ul id="search_result">
+				        	<li onclick="window.open('login.html','_self')"><img src="images/out.png" id =quit_img>退出登录</li>
+				        </ul>
+				    </div>
+				</li>
 		        <li><img src="images/message.png" onclick='' ></li>
 		        <li><img src="images/edit.png" onclick='' ></li>
 	      	</ul>
@@ -66,24 +86,52 @@
 				</div>
 				
 				<p class="SearchResultTilte">热门</p>
-					<!-- 资讯正文 -->
+				<!-- 资讯正文 -->
 				<div class="newsLists">
 					<div class="row">
 						<div class="col-md-1 head_photo">
 							<img src="images/index_content_image1.jpg" onclick='' >
 						</div>
-						<div class="col-md-10 topic_name">
+						<div class="col-md-9 topic_name">
 							<p>无用但有趣的冷知识</p>
 							<span class="source">来自用户思否 04/18</span>
 						</div>
-						<div class="col-md-1">
-							<img src="images/dropdown.png">
+						<div class="col-md-2 dropdown">
+							<!-- <img src="images/dropdown.png"> -->
+							<ul id="multi_drop_down_box">
+						        <li><a class="fly2" href="#"><img src="images/dropdown.png"></a>
+						            <ul class="dd">
+						                <li><a class="fly3" href="#">不感兴趣</a>
+						                    <ul>
+						                        <li><a href="#">内容质量差</a></li>
+						                        <li><a href="#">不感兴趣</a></li>
+						                        <li><a href="#">看过了</a></li>
+						                        <li><a href="#">不想看：<span>source_site</span></a></li>
+						                        <li><a href="#">不想看：<span>topic_name</span></a></li>
+						                    </ul>
+						                </li>
+						                <li><a class="fly3" href="#">举报</a>
+						                    <ul>
+						                        <li><a href="#">垃圾广告</a></li>
+						                        <li><a href="#">淫秽色情</a></li>
+						                        <li><a href="#">违法有害信息</a></li>
+						                        <li><a href="#">其他</a></li>
+						                    </ul>
+						                </li>
+						                <li><a class="fly3" href="#">收藏</a>
+						            </ul>
+						        </li> 
+						    </ul>
+
 						</div>
 					</div>
 					<div class="row">
 						<div class="col-md-1"></div>
-						<div class="col-md-10">
-							<p id="content_details">研究称久坐可能让人变蠢UCLA的希达斯(Prabha Siddarth)博士进行的一项研究表明，久坐行为与大脑内颞叶的厚度减少有关，大脑内颞叶中含有的海马体是学习和记忆的关键区域。研究人员向35名年龄在45到70岁之间的健康人士询问了他们的活动水平和每天坐着的平均小时数，然后使用MRI对他们的大脑进行了扫描。研究人员发现，他们大脑内颞叶的厚度与他们久坐的程度负相关；报告自己坐着的时间较长的研究对象大脑内颞叶最薄。这意味着，你在椅子上坐的时间越久，就越不利于你的大脑健康，可能会导致学习和记忆受损。当然这一结果只是相关性而不是因果性。<br><br>from Solidot</p>
+						<div class="col-md-10" onclick="window.open('http://www.baidu.com','_blank')">
+							<div onmouseover="this.className='changebackground'" onmouseout="this.className='normalbackground'">
+								<img  class="img-responsive" src="images/newsimage.jpg">
+								<p id="content_details">研究称久坐可能让人变蠢UCLA的希达斯(Prabha Siddarth)博士进行的一项研究表明，久坐行为与大脑内颞叶的厚度减少有关，大脑内颞叶中含有的海马体是学习和记忆的关键区域。研究人员向35名年龄在45到70岁之间的健康人士询问了他们的活动水平和每天坐着的平均小时数，然后使用MRI对他们的大脑进行了扫描。研究人员发现，他们大脑内颞叶的厚度与他们久坐的程度负相关；报告自己坐着的时间较长的研究对象大脑内颞叶最薄。这意味着，你在椅子上坐的时间越久，就越不利于你的大脑健康，可能会导致学习和记忆受损。当然这一结果只是相关性而不是因果性。<br><br>from Solidot</p>
+							</div>
 						</div>
 						<div class="col-md-1"></div>
 					</div>
@@ -93,7 +141,7 @@
 							<a href=""><img src="images/like.png">8</a>
 						</div>
 						<div class="col-md-2">
-							<a href=""><img src="images/comment.png">1</a>
+							<a href="#" id =comment_a><img src="images/comment.png">1</a>
 						</div>
 						<div class="col-md-2">
 							<a href=""><img src="images/share_8a.png">5</a>
@@ -102,6 +150,10 @@
 							<a href=""><img src="images/dislike.png">5</a>
 						</div>
 						<div class="col-md-3"></div>
+					</div>
+					<div id = comment_add>
+						<hr>
+						<input class="form-control" placeholder="添加评论">
 					</div>
 				</div>
 				
@@ -177,10 +229,11 @@
 				<div id="PopularSearch">
 					<p class="SearchResultTilte">热门搜索</p>
 					<ul>
-						<li><a href="#">《后来的我们》</a></li>
-						<li><a href="#">2018北京车展</a></li>
-						<li><a href="#">复仇者联盟3</a></li>
-						<li><a href="#">《创造101》</a></li>
+			        	<li><a href="SearchResult.html">《后来的我们》</a> </li>
+			        	<li><a href="SearchResult.html">复仇者联盟3</a></li>
+			        	<li><a href="SearchResult.html">创造101</a></li>
+			        	<li><a href="SearchResult.html">华为发布</a></li>
+			        	<li><a href="SearchResult.html">滴滴最新动向</a></li>
 					</ul>
 				</div>
 
@@ -206,6 +259,34 @@
 	<script src="js/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script>
+		$(".nav_search_input").focus(function(){
+        $("#nav_search").css("display","block");
+        event.stopPropagation();
+        $(document).bind("click", function () {
+            if ($("#nav_search").css("display") == "block") {
+                $("#nav_search").css("display", "none");
+                event.stopPropagation();
+            }
+            
+        }); 
+      });
+    $(".nav_search_input").click(function (event) {
+        event.stopPropagation();//阻止事件向上冒泡
+    });
+    //退出按钮
+    $("#head_quit").hover(function(){
+        $("#quit_btn").css("display","block");
+        event.stopPropagation();
+        $(document).bind("click", function () {
+            if ($("#quit_btn").css("display") == "block") {
+                $("#quit_btn").css("display", "none");
+                event.stopPropagation();
+            }
+        }); 
+      });
+    $("#head_quit").click(function (event) {
+        event.stopPropagation();//阻止事件向上冒泡
+    });
 		/*左侧从发布的动态开始随导航栏置顶*/
 		window.onload = function () {
 		    var tab_options =  $('#tab_options').offset();

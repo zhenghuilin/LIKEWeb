@@ -25,6 +25,7 @@ body{
 	height:25px;
 	border-radius: 25px;
 	margin-top: 12.5px;
+	cursor: pointer;
 }
 .form-group{
 	padding-left: 100px;
@@ -52,7 +53,8 @@ a,a:hover{
 .left_topic_1 li,.left_topic_2 li{
 	background-color: #fff;
 	height: 38px;
-	line-height: 38px;
+	padding: 8px 16px;
+	cursor: pointer;
 }
 .left_topic_1,.left_topic_2{
 	border-radius: 5px;
@@ -66,23 +68,16 @@ a,a:hover{
 .left_topic_1 .li_final,.left_topic_2 .li_final{
 	border-radius: 0 0 5px 5px;
 }
-.left_topic_1  li a,.left_topic_2 li a{
-    margin: 0;
-    padding: 8px 16px;
-    border-radius: 0;
-    text-decoration: none;
-}
 .left_topic_1  li:hover,.left_topic_2  li:hover{
     color: #fff;
     background-color: #558ED5;
     border: 1px solid #558ED5;
     text-decoration: none;
 }
-.left_topic_1  li a:hover,.left_topic_2  li a:hover{
-	color: #fff;
-}
+
 .user_name_head li img{
 	border-radius: 5px 5px 0 0;
+	cursor: pointer;
 }
 .user_name_head .user_name{
 	background-color: #fff;
@@ -96,7 +91,65 @@ a,a:hover{
 }
 #div_left_top .active{
 	background-color: #558ED5;
-}
-#div_left_top .active a{
 	color: #fff;
+}
+/*搜索框*/
+#nav_search{
+	z-index: 1;
+	position: fixed;
+	left:272px;
+	top: 50px;
+	border-top: 0;
+	width: 205px;
+	background-color: #fff;
+	border-radius: 5px;
+	display: none;
+	border: 1px solid #f2f2f2;
+}
+#nav_search ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+#nav_search ul li{
+	padding: 0 0 0 10px;
+	font-size: 14px;
+	line-height: 30px;
+	cursor: pointer;
+	color: #558ED5;
+}
+#nav_search ul li:hover{
+	background-color: #f2f2f2;
+}
+
+/*退出框*/
+#quit_btn{
+	z-index: 1;
+	position: fixed;
+	right:100px;
+	top: 50px;
+	border-top: 0;
+	width: 130px;
+	background-color: #fff;
+	border-radius: 5px;
+	display: none;
+	border: 1px solid #f2f2f2;
+}
+#quit_btn ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+#quit_btn ul li{
+	padding: 0 0 0 10px;
+	font-size: 14px;
+	line-height: 40px;
+	cursor: pointer;
+	color: #558ED5;
+}
+#quit_btn ul li:hover{
+	background-color: #f2f2f2;
+}
+#quit_img{
+	margin-top: -5px;
 }

@@ -76,6 +76,9 @@
 #share_topic{
 	display: none;
 }
+#comment_add{
+	display: none;
+}
 #tab_options_all{
 	z-index:1;
 }
@@ -100,8 +103,42 @@
 #tab_options a{
 	padding:5px;
 }
-#tab_options .active{
-	border-bottom: 2px solid #000;
+/*0504修改开始*/
+#tab_options .active a{
+	color: #558ED5;
+	font-weight: bold;
+	text-decoration: none;
+}
+#tab_options a:hover{
+	color: #558ED5;
+	text-decoration: none;
+}
+#hot_news,#focus_on_news,#time_news,#more_news{
+	display: none;
+}
+.recommend_topic p{
+	font-weight: bold;
+}
+.recommend_topic img{
+	border-radius: 40px;
+}
+.recommend_topic input{
+	margin-top: 15px;
+}
+.cancel_btn{
+	background-color: #f2f2f2;
+	border:none;
+	border-radius: 10px;
+	width: 70px;
+	line-height: 25px;
+}
+/*0504修改结束*/
+.normalbackground{
+	background-color: #fff;
+}
+.changebackground{
+	background-color: #f2f2f2;
+	cursor: pointer;
 }
 /*  推荐的资讯*/
 .newsLists{
@@ -142,16 +179,115 @@
 	color: #558ED5;
 	text-decoration: none;
 }
-.focus_ons{
-	padding: 5px 0 0 0; 
-	height: 42px;
+
+.dropdown img{
+	cursor: pointer;
 }
-.focus_ons li{
-	display: inline-block;
+.focus_on{
+	padding: 5px 0 0 0;
 }
-.focus_ons li span{
-	color: #888888;
+.focus_on img{
+	cursor: pointer;
 }
-.focus_ons li img{
-	margin-bottom: 20px;
+.focus_on p{
+	color: gray;
+}
+.focus_on a{
+	text-decoration: none;
+	/* font-weight: bold; */
+}
+/*资讯的下拉选项，比如收藏*/
+/* main menu styles */
+#multi_drop_down_box,#multi_drop_down_box ul {
+    list-style:none;
+    margin:0;
+    padding:0;
+}
+#multi_drop_down_box{
+    height:41px;
+    padding-left:5px;
+    padding-top:5px;
+    position:relative;
+    z-index:1;
+}
+#multi_drop_down_box ul {
+    left:-9999px;
+    position:absolute;
+    top:37px;
+    width:auto;
+}
+
+#multi_drop_down_box ul ul {
+    left:-9999px;
+    position:absolute;
+    top:0;
+    width:auto;
+}
+#multi_drop_down_box li{
+    float:left;
+    margin-right:5px;
+    position:relative;
+}
+#multi_drop_down_box li a {
+    color:#000;
+    display:block;
+    float:left;
+    font-size:16px;
+    padding:8px 10px;
+    text-decoration:none;
+}
+#multi_drop_down_box > li > a {
+    -moz-border-radius:6px;
+    -webkit-border-radius:6px;
+    -o-border-radius:6px;
+    border-radius:6px;
+    overflow:hidden;
+}
+#multi_drop_down_box li a.fly {
+    background: url(../images/arrow.gif) no-repeat right center;
+    padding-right:15px;
+}
+#multi_drop_down_box li a.fly2 {
+   /*  background:url(../images/dropdown.png) no-repeat right center; */
+    padding-right:15px;
+}
+#multi_drop_down_box ul li {
+    margin:0;
+   /*  border-radius: 5px; */
+}
+#multi_drop_down_box ul li a {
+    width:180px;
+    background-color: #fff;
+}
+#multi_drop_down_box ul li .fly3 {
+    width:90px;
+    background-color: #fff;
+}
+#multi_drop_down_box ul li a.fly {
+    padding-right:10px;
+}
+
+/*hover styles*/
+#multi_drop_down_box li:hover > a {
+    background-color:#558ED5;
+    color:#fff;
+}
+#multi_drop_down_box li .dd li ul{
+	border-radius: 5px; 
+}
+/*focus styles*/
+#multi_drop_down_box li a:focus {
+    outline-width:0;
+}
+
+/*popups*/
+#multi_drop_down_box li a:active + ul.dd,#multi_drop_down_box li a:focus + ul.dd,#multi_drop_down_box li ul.dd:hover {
+    left:0;
+}
+#multi_drop_down_box ul.dd li a:active + ul,#multi_drop_down_box ul.dd li a:focus + ul,#multi_drop_down_box ul.dd li ul:hover {
+    left:90px;
+}
+
+#main{
+	background-color: #fff;
 }

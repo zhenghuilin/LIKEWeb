@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <!--  <meta name="viewport" content="width=device-width, initial-scale=1"> -->
 	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
@@ -25,15 +28,31 @@
 	    <!-- Collect the nav links, forms, and other content for toggling -->
 	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		    <form class="navbar-form navbar-left">
-		        <div class="form-group">
-		          <input type="text" class="form-control" placeholder="大家都在搜阿里巴巴">
+		       <div class="form-group aaaa">
+		          	<input type="text" class="form-control nav_search_input" placeholder="大家都在搜阿里巴巴" onclick="this.value='';focus()">
+		        	<!--搜索下拉框-->
+					 <div id="nav_search" >
+				        <ul id="search_result">
+				        	<li onclick="window.open('SearchResult.html','_self')">《后来的我们》</a> </li>
+				        	<li onclick="window.open('SearchResult.html','_self')">复仇者联盟3</li>
+				        	<li onclick="window.open('SearchResult.html','_self')">创造101</li>
+				        	<li onclick="window.open('SearchResult.html','_self')">华为发布</li>
+				        	<li onclick="window.open('SearchResult.html','_self')">滴滴最新动向</li>
+				        </ul>
+				    </div>
 		        </div>
-		         <a href="SearchResult.html"><button type="submit" class="btn btn-default">Submit</button></a>
 		    </form>
 		    <!-- 导航栏右边-->
 	      	<ul class="nav navbar-nav navbar-right">
 		        <li><a href="index.html">首页</a></li>
-		        <li><img class="img-responsive" src="images/head_photo3.jpg" onclick='' ></li>
+		        <li>
+		        	<img src="images/head_photo3.jpg" id =head_quit>
+		        	<div id="quit_btn" >
+				        <ul id="search_result">
+				        	<li onclick="window.open('login.html','_self')"><img src="images/out.png" id =quit_img>退出登录</li>
+				        </ul>
+				    </div>
+				</li>
 		        <li><img src="images/message.png" onclick='' ></li>
 		        <li><img src="images/edit.png" onclick='' ></li>
 	      	</ul>
@@ -59,17 +78,18 @@
 						<span>获得 0 次赞</span>
 					</li>
 				</ul>
-				<div id="div_left_top">
+				<div id="div_left_top"><!--左侧用户的竖直导航-->
 					<ul class="left_topic_1">
-						<li class="active li_first"><a href="#">发布的动态</a></li>
-						<li><a href="CreateTopic.html">创建的主题</a></li>
-						<li><a href="FollowTopic.html">关注的主题</a></li>
-						<li><a href="FollowPerson.html">我关注的人</a></li>
-						<li class="li_final"><a href="FollowMe.html">关注我的人</a></li>
+						<li class="active li_first" onclick="window.open('ReleaseNews.html','_self')">发布的动态</li>
+						<li onclick="window.open('CreateTopic.html','_self')">创建的主题</li>
+						<li onclick="window.open('FollowTopic.html','_self')">关注的主题</li>
+						<li onclick="window.open('FollowPerson.html','_self')">我关注的人</li>
+						<li class="li_final" onclick="window.open('FollowMe.html','_self')">关注我的人</li>
 					</ul>
 					<ul class="left_topic_2">
-						<li class="li_first"><a href="Collect.html">我的收藏</a></li>
-						<li class="li_final"><a href="Browse.html">我的浏览</a></li>
+						<li class="li_first" onclick="window.open('Collect.html','_self')">我的收藏</li>
+						<li onclick="window.open('Browse.html','_self')">我的浏览</li>
+						<li class="li_final" onclick="window.open('UserFigure1.html','_self')">用户画像</li>
 					</ul>
 				</div>
 			</div>
@@ -132,5 +152,35 @@
 	<script src="js/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/index_animation.js"></script>
+	<script>
+	$(".nav_search_input").focus(function(){
+        $("#nav_search").css("display","block");
+        event.stopPropagation();
+        $(document).bind("click", function () {
+            if ($("#nav_search").css("display") == "block") {
+                $("#nav_search").css("display", "none");
+                event.stopPropagation();
+            }
+            
+        }); 
+      });
+    $(".nav_search_input").click(function (event) {
+        event.stopPropagation();//阻止事件向上冒泡
+    });
+    //退出按钮
+    $("#head_quit").hover(function(){
+        $("#quit_btn").css("display","block");
+        event.stopPropagation();
+        $(document).bind("click", function () {
+            if ($("#quit_btn").css("display") == "block") {
+                $("#quit_btn").css("display", "none");
+                event.stopPropagation();
+            }
+        }); 
+      });
+    $("#head_quit").click(function (event) {
+        event.stopPropagation();//阻止事件向上冒泡
+    });
+	</script>
 </body>
 </html>

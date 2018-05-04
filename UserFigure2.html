@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <!--  <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="layui/css/layui.css">
+	<link rel="stylesheet" href="css/public_style.css">
+	<link rel="stylesheet" href="css/index.css">
+	
+</head>
+<body>
+	<!--导航栏-->
+	<nav class="navbar navbar-default navbar-fixed-top"  role="navigation">
+	  <div class="container">
+	    <!-- Brand and toggle get grouped for better mobile display -->
+	    <div class="navbar-header">
+		    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		    </button>
+		    <a class="navbar-brand" href="index.html"><img alt="Brand" src="images/logo.png">LIKE</a>
+	    </div>
+
+	    <!-- Collect the nav links, forms, and other content for toggling -->
+	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		    <form class="navbar-form navbar-left">
+		        <div class="form-group aaaa">
+		          	<input type="text" class="form-control nav_search_input" placeholder="大家都在搜阿里巴巴" onclick="this.value='';focus()">
+		        	<!--搜索下拉框-->
+					 <div id="nav_search" >
+				        <ul id="search_result">
+				        	<li onclick="window.open('SearchResult.html','_self')">《后来的我们》</a> </li>
+				        	<li onclick="window.open('SearchResult.html','_self')">复仇者联盟3</li>
+				        	<li onclick="window.open('SearchResult.html','_self')">创造101</li>
+				        	<li onclick="window.open('SearchResult.html','_self')">华为发布</li>
+				        	<li onclick="window.open('SearchResult.html','_self')">滴滴最新动向</li>
+				        </ul>
+				    </div>
+		        </div>
+		    </form>
+		    <!-- 导航栏右边-->
+	      	<ul class="nav navbar-nav navbar-right">
+		        <li><a href="index.html">首页</a></li>
+		        <li>
+		        	<img src="images/head_photo3.jpg" id =head_quit>
+		        	<div id="quit_btn" >
+				        <ul id="search_result">
+				        	<li onclick="window.open('login.html','_self')"><img src="images/out.png" id =quit_img>退出登录</li>
+				        </ul>
+				    </div>
+				</li>
+		        <li><img src="images/message.png" onclick='' ></li>
+		        <li><img src="images/edit.png" onclick='' ></li>
+	      	</ul>
+	    </div><!-- /.navbar-collapse -->
+	  </div><!-- /.container -->
+	</nav>
+	
+	<div class="container body_content">
+		<div class="row">
+			<div class="col-md-1"></div>
+			<div class="col-md-3">
+				<ul class="user_name_head">
+					<li>
+						<img class="img-responsive" src="images/booleen_photo.jpg">
+					</li>
+					<li class="user_name">
+						<span>Booleen</span>
+					</li>
+					
+				</ul>
+				<div id="div_left_top"><!--左侧用户的竖直导航-->
+					<ul class="left_topic_1">
+						<li class="li_first" onclick="window.open('ReleaseNews.html','_self')">发布的动态</li>
+						<li onclick="window.open('CreateTopic.html','_self')">创建的主题</li>
+						<li onclick="window.open('FollowTopic.html','_self')">关注的主题</li>
+						<li onclick="window.open('FollowPerson.html','_self')">我关注的人</li>
+						<li class="li_final" onclick="window.open('FollowMe.html','_self')">关注我的人</li>
+					</ul>
+					<ul class="left_topic_2">
+						<li class="li_first" onclick="window.open('Collect.html','_self')">我的收藏</li>
+						<li onclick="window.open('Browse.html','_self')">我的浏览</li>
+						<li class="active li_final" onclick="window.open('UserFigure1.html','_self')">用户画像</li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-md-7" style="background-color: #fff;">
+				<div id='main' style="height: 500px;"></div>
+				<hr>
+				<div class="recommend_topic">
+					<p>或许你也感兴趣</p>
+					<div class="row">
+						<div class="col-md-2">
+							<img class="img-responsive" src="images/topic8.jpg">
+							<a href="#" style="padding-left: 10px;">新 华 社</a>
+						</div>
+						<div class="col-md-2">
+							<img class="img-responsive" src="images/topic7.jpg">
+							<a href="#" style="padding-left: 10px;">金杜研究院</a>
+						</div>
+						<div class="col-md-2">
+							<img class="img-responsive" src="images/topic6.jpg">
+							<a href="#" style="padding-left: 10px;">法律读库</a>
+						</div>
+						<div class="col-md-2">
+							<img class="img-responsive" src="images/topic5.jpg">
+							<a href="#" style="padding-left: 10px;">审判研究</a>
+						</div>
+						<div class="col-md-2">
+							<input type="button" value="接受" class="submit_btn" onclick="window.location.href='index.html' ">
+							<input type="button" value="忽略" class="cancel_btn" onclick="window.location.href='UserFigure1.html' ">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-1"></div>
+		</div>
+
+		<!--底部内容 -->
+		<div class="content-bottombar">
+			<!-- <div class="row"> -->
+			<div class="bottom-link-parent">
+				<a href="#" class="bottom-link">帮助</a>
+				<a href="#" class="bottom-link">隐私</a>
+				<a href="#" class="bottom-link">条款</a>
+			</div>
+			<div class="row">
+				<div class="bottom-link-parent">copyright@2018 Shineonu体验技术部出品</div>
+			</div>
+		</div>
+	</div>
+	<script src="layui/layui.js"></script>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/index_animation.js"></script>
+	<script src='https://cdn.bootcss.com/echarts/3.7.0/echarts.simple.js'></script>
+    <script src='js/echarts-wordcloud.js'></script>
+	<script>
+	$(".nav_search_input").focus(function(){
+	    $("#nav_search").css("display","block");
+		event.stopPropagation();
+		$(document).bind("click", function () {
+			if ($("#nav_search").css("display") == "block") {
+				$("#nav_search").css("display", "none");
+				event.stopPropagation();
+			}
+			
+		});	
+	  });
+	$(".nav_search_input").click(function (event) {
+		event.stopPropagation();//阻止事件向上冒泡
+	});
+	//退出按钮
+	$("#head_quit").hover(function(){
+	    $("#quit_btn").css("display","block");
+		event.stopPropagation();
+		$(document).bind("click", function () {
+			if ($("#quit_btn").css("display") == "block") {
+				$("#quit_btn").css("display", "none");
+				event.stopPropagation();
+			}
+		});	
+	  });
+	$("#head_quit").click(function (event) {
+		event.stopPropagation();//阻止事件向上冒泡
+	});
+
+
+	/*添加链接和分享到主题的点击事件，其下面出现一个div*/
+    var link_a  = document.getElementById('link_a');
+	var share_a  = document.getElementById('share_a');
+    var comment_a =document.getElementById('comment_a');
+	var link_add = document.getElementById('link_add');
+	var share_topic = document.getElementById('share_topic');
+    var comment_add =document.getElementById('comment_add');
+    
+
+
+	link_a.onclick = function(){
+	    var val = link_add.style.display;
+	    if(val == 'none'){
+	        link_add.style.display = 'block'; //显示
+	    }else{
+	        link_add.style.display = 'none'; //隐藏
+	    }
+	}
+	share_a.onclick = function(){
+	    var val = share_topic.style.display;
+	    if(val == 'none'){
+	        share_topic.style.display = 'block'; //显示
+	    }else{
+	        share_topic.style.display = 'none'; //隐藏
+	    }
+	}
+    comment_a.onclick = function(){
+        var val = comment_add.style.display;
+        if(val == 'none'){
+            comment_add.style.display = 'block'; //显示
+        }else{
+            comment_add.style.display = 'none'; //隐藏
+        }
+    }
+   
+	</script>
+	<script>
+            var chart = echarts.init(document.getElementById('main'));
+
+            var option = {
+                tooltip: {},
+                series: [ {
+                    type: 'wordCloud',
+                    gridSize: 5,
+                    sizeRange: [20, 70],
+                    rotationRange: [-90, 90],
+                    shape: 'pentagon',
+                    /*width: 600,*/
+                    height: 500,
+                    drawOutOfBound: true,
+                    textStyle: {
+                        normal: {
+                            color: function () {
+                                return 'rgb(' + [
+                                    Math.round(Math.random() * 160),
+                                    Math.round(Math.random() * 160),
+                                    Math.round(Math.random() * 160)
+                                ].join(',') + ')';
+                            }
+                        },
+                        emphasis: {
+                            shadowBlur: 10,
+                            shadowColor: '#333'
+                        }
+                    },
+                    data: [
+                        {
+                            name: '教育',
+                            value: 10000,
+                            textStyle: {
+                                normal: {
+                                    color: '#558ED5'
+                                },
+                                emphasis: {
+                                    color: 'red'
+                                }
+                            }
+                        },
+                        {
+                            name: '游戏',
+                            value: 6181
+                        },
+                        {
+                            name: '汽车',
+                            value: 4386
+                        },
+                        {
+                            name: '社会',
+                            value: 4055
+                        },
+                        {
+                            name: '人工智能',
+                            value: 2467
+                        },
+                        {
+                            name: '时尚',
+                            value: 2244
+                        },
+                        {
+                            name: '娱乐',
+                            value: 1898
+                        },
+                        {
+                            name: '美食',
+                            value: 1484
+                        },
+                        {
+                            name: '名胜',
+                            value: 1112
+                        },
+                        {
+                            name: '风险投资',
+                            value: 965
+                        },
+                        {
+                            name: '国际国内重大事件',
+                            value: 847
+                        },
+                        {
+                            name: '财经',
+                            value: 582
+                        },
+                        {
+                            name: '军事',
+                            value: 550
+                        },
+                        {
+                            name: '科技',
+                            value: 462
+                        },
+                        {
+                            name: '美食',
+                            value: 366
+                        },
+                        {
+                            name: '体育',
+                            value: 360
+                        },
+                        {
+                            name: '男',
+                            value: 282
+                        },
+                        {
+                            name: '有为青年',
+                            value: 273
+                        },
+                        {
+                            name: '知识分子',
+                            value: 265
+                        }
+                    ]
+                } ]
+            };
+
+            chart.setOption(option);
+
+            window.onresize = chart.resize;
+        </script>
+</body>
+</html>

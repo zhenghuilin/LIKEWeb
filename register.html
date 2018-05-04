@@ -29,8 +29,10 @@
 					<div class="login_title">
 						<h3>用户注册</h3>
 					</div>
+					<!-- 输入邮箱 -->
+					<input type="text" name="email"  lay-verify="required" placeholder="请输入邮箱" autocomplete="off" class="layui-input email_input">
 					<!-- 输入用户名 -->
-					<input type="text" name="user"  lay-verify="required" placeholder="请输入用户名/手机号" autocomplete="off" class="layui-input user_input">
+					<input type="text" name="user"  lay-verify="required" placeholder="请输入用户名" autocomplete="off" class="layui-input user_input">
 					<!-- 输入密码 -->
 					<input type="password" name="pwd"  lay-verify="required" placeholder="请输入密码" autocomplete="off" class="layui-input pwd_input">
 					<div class="layui-input-block">
@@ -38,7 +40,7 @@
 							<input type="text" id = "input" value="" lay-verify="required" placeholder="请输入验证码" autocomplete="off" class=" layui-input verify_code_input">
 						</li>
 						<li>
-							<input type = "button" id="code" onclick="createCode()" class="layui-input-inline" /> 
+							<input type = "button" id=submit_code class="layui-input-inline" value="发送验证码" /> 
 						</li>
 					</div>
 					
@@ -64,7 +66,6 @@
 	<script src="layui/layui.js"></script>
 	<script src="js/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
-	<script src="js/verify_code.js"></script>
 	<script>
        layui.use('form', function(){
 			  var form = layui.form

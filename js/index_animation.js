@@ -29,26 +29,38 @@ window.onload = function () {
 
 
 /*添加链接和分享到主题的点击事件，其下面出现一个div*/
-var link_a  = document.getElementById('link_a');
-		var share_a  = document.getElementById('share_a');
-		var link_add = document.getElementById('link_add');
-		var share_topic = document.getElementById('share_topic');
-		link_a.onclick = function(){
-		    var val = link_add.style.display;
-		    if(val == 'none'){
-		        link_add.style.display = 'block'; //显示
-		    }else{
-		        link_add.style.display = 'none'; //隐藏
-		    }
-		}
-		share_a.onclick = function(){
-		    var val = share_topic.style.display;
-		    if(val == 'none'){
-		        share_topic.style.display = 'block'; //显示
-		    }else{
-		        share_topic.style.display = 'none'; //隐藏
-		    }
-		}
+    var link_a  = document.getElementById('link_a');
+	var share_a  = document.getElementById('share_a');
+    var comment_a =document.getElementById('comment_a');
+	var link_add = document.getElementById('link_add');
+	var share_topic = document.getElementById('share_topic');
+    var comment_add =document.getElementById('comment_add');
+    
+	link_a.onclick = function(){
+	    var val = link_add.style.display;
+	    if(val == 'none'){
+	        link_add.style.display = 'block'; //显示
+	    }else{
+	        link_add.style.display = 'none'; //隐藏
+	    }
+	}
+	share_a.onclick = function(){
+	    var val = share_topic.style.display;
+	    if(val == 'none'){
+	        share_topic.style.display = 'block'; //显示
+	    }else{
+	        share_topic.style.display = 'none'; //隐藏
+	    }
+	}
+    comment_a.onclick = function(){
+        var val = comment_add.style.display;
+        if(val == 'none'){
+            comment_add.style.display = 'block'; //显示
+        }else{
+            comment_add.style.display = 'none'; //隐藏
+        }
+    }
+
 
 /*展开全文和收起全文的事件*/
 	function init(){
@@ -77,5 +89,7 @@ var link_a  = document.getElementById('link_a');
         ctn.innerHTML = "";
         ctn.appendChild(span);
         ctn.appendChild(a);
+
+       
      }
      init();
